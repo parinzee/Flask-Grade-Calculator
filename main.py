@@ -145,6 +145,8 @@ def send():
     final_elect = (elect1 + elect2 + elect3 + elect4 + elect5 + elect6) * 0.25
     final_grade = (final_core + final_elect) / 3.5
 
+    final_grade = round(final_grade, 2)
+
     return render_template('normal.html', title='Normal', final_grade=final_grade)
 
 
@@ -200,5 +202,7 @@ def send2():
     final_core = (core1 + core2 + core3 + core4) * 0.5
     final_elect = (elect1 + elect2 + elect3 + elect4 + elect5 + elect6) * 0.25
     final_grade = (final_core + final_elect) / 3.5
+
+    final_grade = round(final_grade, 2)
 
     return render_template('beta.html', title='Beta', final_grade=final_grade)
