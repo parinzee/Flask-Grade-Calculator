@@ -1,0 +1,155 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <header align="center" style="max-width: 500px; margin-left: auto; margin-right: auto">
+      <div style="color: black; border: 5px solid black; border-radius: 30px; display: inline-block; background: white">
+          <br><br>
+          <i><h3>Instructions</h3>
+      <h5><p>Tap/Click each space and input your grades as numbers (No percentage sign). Click calculate and your answer will be in the green box.</p></h5></i>
+        <br>
+           <div class="alert">
+              {{ final_grade }}
+          </div>
+          <br>
+          <br>
+              <fieldset class="form-group">
+                  <form action="/send" method="POST">
+                      <div>
+                      <label for="core1">
+                          Core Subject 1:
+                      </label>
+                      <input
+                      type="text"
+                      placeholder="  100"
+                      class="u-full-width"
+                      name="core1"
+                      >
+                      </div>
+
+                      <div>
+                      <label for="core2">
+                          Core Subject 2:
+                      </label>
+                      <input
+                      type="text"
+                      placeholder="  100"
+                      class="u-full-width"
+                      name="core2"
+                      >
+                      </div>
+
+                      <div>
+                      <label for="core3">
+                          Core Subject 3:
+                      </label>
+                      <input
+                      type="text"
+                      placeholder="  100"
+                      class="u-full-width"
+                      name="core3"
+                      >
+                      </div>
+
+                      <div>
+                      <label for="core1">
+                          Core Subject 4:
+                      </label>
+                      <input
+                      type="text"
+                      placeholder="  100"
+                      class="u-full-width"
+                      name="core4"
+                      >
+                      </div>
+
+              <hr>
+              <div class="form-group">
+
+                  <div>
+                      <label for="elective1">
+                          Elective Subject 1:
+                      </label>
+                      <input
+                      type="text"
+                      placeholder="  100"
+                      class="u-full-width"
+                      name="elective1"
+                      >
+                  </div>
+
+                  <div>
+                      <label for="elective2">
+                          Elective Subject 2:
+                      </label>
+                      <input
+                      type="text"
+                      placeholder="  100"
+                      class="u-full-width"
+                      name="elective2"
+                      >
+                  </div>
+
+                  <div>
+                      <label for="elective3">
+                          Elective Subject 3:
+                      </label>
+                      <input
+                      type="text"
+                      placeholder="  100"
+                      class="u-full-width"
+                      name="elective3"
+                      >
+                  </div>
+
+                  <div>
+                      <label for="elective4">
+                          Elective Subject 4:
+                      </label>
+                      <input
+                      type="text"
+                      placeholder="  100"
+                      class="u-full-width"
+                      name="elective4"
+                      >
+                  </div>
+
+
+                  <div>
+                      <label for="elective5">
+                          Elective Subject 5:
+                      </label>
+                      <input
+                      type="text"
+                      placeholder="  100"
+                      class="u-full-width"
+                      name="elective5"
+                      >
+
+                  </div>
+                  <div>
+                      <label for="elective6">
+                          Elective Subject 6:
+                      </label>
+                      <input
+                      type="text"
+                      placeholder="  100"
+                      class="u-full-width"
+                      name="elective6"
+                      >
+                  </div>
+
+
+              </div>
+            <input type="submit" value="Calculate" id="calc_button" />
+                  </form>
+                  </fieldset>
+
+          <br><br><br>
+      <br>
+      <a href="/"><h4> Back to Main Page</h4> </a>
+
+      </div>
+    </header>
+
+    <br>
+{% endblock content %}
