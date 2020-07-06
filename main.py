@@ -150,9 +150,13 @@ def send():
     return render_template('normal.html', title='Normal', final_grade=final_grade)
 
 
-@app.route("/beta", methods=['GET', 'POST'])
+@app.route("/honors", methods=['GET', 'POST'])
 def beta_page():
-    return render_template('beta.html', title='Beta')
+    return render_template('beta.html', title='Honors')
+
+@app.route("/credits")
+def credits():
+    return render_template('credits.html', title='Credits!')
 
 
 @app.route('/send2', methods=['POST'])
