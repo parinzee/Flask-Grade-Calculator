@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/FlaskPortfolioWebsite/.idea/FlaskPortfolioWebsite.iml" filepath="$USER_HOME$/FlaskPortfolioWebsite/.idea/FlaskPortfolioWebsite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../FlaskPortfolioWebsite/.idea/FlaskPortfolioWebsite.iml" filepath="$PROJECT_DIR$/../FlaskPortfolioWebsite/.idea/FlaskPortfolioWebsite.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/FlaskProject.iml" filepath="$PROJECT_DIR$/.idea/FlaskProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PycharmProjects/.idea/PycharmProjects.iml" filepath="$PROJECT_DIR$/../PycharmProjects/.idea/PycharmProjects.iml" />
     </modules>
   </component>
 </project>

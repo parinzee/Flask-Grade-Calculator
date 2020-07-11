@@ -24,7 +24,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b4b5878-42d3-47e7-8c05-905934d4910a" name="Default Changelist" comment="" />
+    <list default="true" id="5b4b5878-42d3-47e7-8c05-905934d4910a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/FlaskProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FlaskProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -54,7 +58,110 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../FlaskPortfolioWebsite" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\parin\FlaskPortfolioWebsite\.well-known\pki-validation\" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\parin\FlaskPortfolioWebsite" />
+      <recent name="C:\Users\parin\FlaskPortfolioWebsite\templates" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Lists, Arrays ETC">
+    <configuration name="Lists" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../PycharmProjects/Python Learning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../PycharmProjects/Python Learning/Lists.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Lists, Arrays ETC" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../PycharmProjects/Python Learning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../PycharmProjects/Python Learning/Lists, Arrays ETC.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Students" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../PycharmProjects/Python-OOP" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../PycharmProjects/Python-OOP/Students.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Today" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PycharmProjects" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../PycharmProjects/Python Learning" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../PycharmProjects/Python Learning/Today.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Lists, Arrays ETC" />
+        <item itemvalue="Python.Lists" />
+        <item itemvalue="Python.Students" />
+        <item itemvalue="Python.Today" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -69,6 +176,9 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -82,13 +192,49 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="565" y="257" key="FileChooserDialogImpl" timestamp="1594029022804">
+    <state x="240" y="157" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594296765862">
       <screen x="64" y="0" width="1440" height="1003" />
     </state>
-    <state x="565" y="257" key="FileChooserDialogImpl/64.0.1440.1003@64.0.1440.1003" timestamp="1594029022804" />
-    <state x="286" y="147" key="SettingsEditor" timestamp="1594028881795">
+    <state x="240" y="157" key="#com.intellij.execution.impl.EditConfigurationsDialog/64.0.1440.1003@64.0.1440.1003" timestamp="1594296765862" />
+    <state x="565" y="257" key="FileChooserDialogImpl" timestamp="1594192336989">
       <screen x="64" y="0" width="1440" height="1003" />
     </state>
-    <state x="286" y="147" key="SettingsEditor/64.0.1440.1003@64.0.1440.1003" timestamp="1594028881795" />
+    <state x="565" y="257" key="FileChooserDialogImpl/64.0.1440.1003@64.0.1440.1003" timestamp="1594192336989" />
+    <state width="1419" height="255" key="GridCell.Tab.0.bottom" timestamp="1594384653393">
+      <screen x="64" y="0" width="1440" height="1003" />
+    </state>
+    <state width="1419" height="255" key="GridCell.Tab.0.bottom/64.0.1440.1003@64.0.1440.1003" timestamp="1594384653393" />
+    <state width="1419" height="255" key="GridCell.Tab.0.center" timestamp="1594384653393">
+      <screen x="64" y="0" width="1440" height="1003" />
+    </state>
+    <state width="1419" height="255" key="GridCell.Tab.0.center/64.0.1440.1003@64.0.1440.1003" timestamp="1594384653393" />
+    <state width="1419" height="255" key="GridCell.Tab.0.left" timestamp="1594384653393">
+      <screen x="64" y="0" width="1440" height="1003" />
+    </state>
+    <state width="1419" height="255" key="GridCell.Tab.0.left/64.0.1440.1003@64.0.1440.1003" timestamp="1594384653393" />
+    <state width="1419" height="255" key="GridCell.Tab.0.right" timestamp="1594384653393">
+      <screen x="64" y="0" width="1440" height="1003" />
+    </state>
+    <state width="1419" height="255" key="GridCell.Tab.0.right/64.0.1440.1003@64.0.1440.1003" timestamp="1594384653393" />
+    <state width="1419" height="315" key="GridCell.Tab.1.bottom" timestamp="1594298721265">
+      <screen x="64" y="0" width="1440" height="1003" />
+    </state>
+    <state width="1419" height="315" key="GridCell.Tab.1.bottom/64.0.1440.1003@64.0.1440.1003" timestamp="1594298721265" />
+    <state width="1419" height="315" key="GridCell.Tab.1.center" timestamp="1594298721256">
+      <screen x="64" y="0" width="1440" height="1003" />
+    </state>
+    <state width="1419" height="315" key="GridCell.Tab.1.center/64.0.1440.1003@64.0.1440.1003" timestamp="1594298721256" />
+    <state width="1419" height="315" key="GridCell.Tab.1.left" timestamp="1594298721256">
+      <screen x="64" y="0" width="1440" height="1003" />
+    </state>
+    <state width="1419" height="315" key="GridCell.Tab.1.left/64.0.1440.1003@64.0.1440.1003" timestamp="1594298721256" />
+    <state width="1419" height="315" key="GridCell.Tab.1.right" timestamp="1594298721264">
+      <screen x="64" y="0" width="1440" height="1003" />
+    </state>
+    <state width="1419" height="315" key="GridCell.Tab.1.right/64.0.1440.1003@64.0.1440.1003" timestamp="1594298721264" />
+    <state x="286" y="147" key="SettingsEditor" timestamp="1594297085175">
+      <screen x="64" y="0" width="1440" height="1003" />
+    </state>
+    <state x="286" y="147" key="SettingsEditor/64.0.1440.1003@64.0.1440.1003" timestamp="1594297085175" />
   </component>
 </project>
