@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "c:\\ProgramData\\Anaconda3\\envs\\FlaskProject\\python.exe"
+    "python.pythonPath": "c:\\ProgramData\\Anaconda3\\envs\\FlaskProject\\python.exe",
+    "python.formatting.provider": "black"
 }
