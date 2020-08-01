@@ -94,119 +94,117 @@ def home_page():
 
 @app.route("/normal", methods=['GET', 'POST'])
 def normal_page():
-    return render_template('normal.html', title='Normal')
+    if request.method == 'POST':
+        core1 = request.form['core1']
+        core2 = request.form['core2']
+        core3 = request.form['core3']
+        core4 = request.form['core4']
 
+        elect1 = request.form['elective1']
+        elect2 = request.form['elective2']
+        elect3 = request.form['elective3']
+        elect4 = request.form['elective4']
+        elect5 = request.form['elective5']
+        elect6 = request.form['elective6']
 
-@app.route('/send', methods=['POST'])
-def send():
-    core1 = request.form['core1']
-    core2 = request.form['core2']
-    core3 = request.form['core3']
-    core4 = request.form['core4']
+        calculation(core1)
+        core1 = calculation.grade
 
-    elect1 = request.form['elective1']
-    elect2 = request.form['elective2']
-    elect3 = request.form['elective3']
-    elect4 = request.form['elective4']
-    elect5 = request.form['elective5']
-    elect6 = request.form['elective6']
+        calculation(core2)
+        core2 = calculation.grade
 
-    calculation(core1)
-    core1 = calculation.grade
+        calculation(core3)
+        core3 = calculation.grade
 
-    calculation(core2)
-    core2 = calculation.grade
+        calculation(core4)
+        core4 = calculation.grade
 
-    calculation(core3)
-    core3 = calculation.grade
+        calculation(elect1)
+        elect1 = calculation.grade
 
-    calculation(core4)
-    core4 = calculation.grade
+        calculation(elect2)
+        elect2 = calculation.grade
 
-    calculation(elect1)
-    elect1 = calculation.grade
+        calculation(elect3)
+        elect3 = calculation.grade
 
-    calculation(elect2)
-    elect2 = calculation.grade
+        calculation(elect4)
+        elect4 = calculation.grade
 
-    calculation(elect3)
-    elect3 = calculation.grade
+        calculation(elect5)
+        elect5 = calculation.grade
 
-    calculation(elect4)
-    elect4 = calculation.grade
+        calculation(elect6)
+        elect6 = calculation.grade
 
-    calculation(elect5)
-    elect5 = calculation.grade
+        final_core = (core1 + core2 + core3 + core4) * 0.5
+        final_elect = (elect1 + elect2 + elect3 + elect4 + elect5 + elect6) * 0.25
+        final_grade = (final_core + final_elect) / 3.5
 
-    calculation(elect6)
-    elect6 = calculation.grade
+        final_grade = round(final_grade, 2)
 
-    final_core = (core1 + core2 + core3 + core4) * 0.5
-    final_elect = (elect1 + elect2 + elect3 + elect4 + elect5 + elect6) * 0.25
-    final_grade = (final_core + final_elect) / 3.5
-
-    final_grade = round(final_grade, 2)
-
-    return render_template('normal.html', title='Normal', final_grade=final_grade)
-
+        return render_template('normal.html', title='Normal', final_grade=final_grade)
+    
+    else:
+        return render_template('normal.html', title='Normal')
 
 @app.route("/honors", methods=['GET', 'POST'])
 def beta_page():
-    return render_template('beta.html', title='Honors')
+    if request.method == 'POST':
+        core1 = request.form['core1']
+        core2 = request.form['core2']
+        core3 = request.form['core3']
+        core4 = request.form['core4']
+
+        elect1 = request.form['elective1']
+        elect2 = request.form['elective2']
+        elect3 = request.form['elective3']
+        elect4 = request.form['elective4']
+        elect5 = request.form['elective5']
+        elect6 = request.form['elective6']
+
+        calculation2(core1)
+        core1 = calculation2.grade
+
+        calculation2(core2)
+        core2 = calculation2.grade
+
+        calculation2(core3)
+        core3 = calculation2.grade
+
+        calculation2(core4)
+        core4 = calculation2.grade
+
+        calculation(elect1)
+        elect1 = calculation.grade
+
+        calculation(elect2)
+        elect2 = calculation.grade
+
+        calculation(elect3)
+        elect3 = calculation.grade
+
+        calculation(elect4)
+        elect4 = calculation.grade
+
+        calculation(elect5)
+        elect5 = calculation.grade
+
+        calculation(elect6)
+        elect6 = calculation.grade
+
+        final_core = (core1 + core2 + core3 + core4) * 0.5
+        final_elect = (elect1 + elect2 + elect3 + elect4 + elect5 + elect6) * 0.25
+        final_grade = (final_core + final_elect) / 3.5
+
+        final_grade = round(final_grade, 2)
+
+        return render_template('beta.html', title='Beta', final_grade=final_grade)
+        
+    else:
+        
+        return render_template('beta.html', title='Honors')
 
 @app.route("/credits")
 def credits():
     return render_template('credits.html', title='Credits!')
-
-
-@app.route('/send2', methods=['POST'])
-def send2():
-    core1 = request.form['core1']
-    core2 = request.form['core2']
-    core3 = request.form['core3']
-    core4 = request.form['core4']
-
-    elect1 = request.form['elective1']
-    elect2 = request.form['elective2']
-    elect3 = request.form['elective3']
-    elect4 = request.form['elective4']
-    elect5 = request.form['elective5']
-    elect6 = request.form['elective6']
-
-    calculation2(core1)
-    core1 = calculation2.grade
-
-    calculation2(core2)
-    core2 = calculation2.grade
-
-    calculation2(core3)
-    core3 = calculation2.grade
-
-    calculation2(core4)
-    core4 = calculation2.grade
-
-    calculation(elect1)
-    elect1 = calculation.grade
-
-    calculation(elect2)
-    elect2 = calculation.grade
-
-    calculation(elect3)
-    elect3 = calculation.grade
-
-    calculation(elect4)
-    elect4 = calculation.grade
-
-    calculation(elect5)
-    elect5 = calculation.grade
-
-    calculation(elect6)
-    elect6 = calculation.grade
-
-    final_core = (core1 + core2 + core3 + core4) * 0.5
-    final_elect = (elect1 + elect2 + elect3 + elect4 + elect5 + elect6) * 0.25
-    final_grade = (final_core + final_elect) / 3.5
-
-    final_grade = round(final_grade, 2)
-
-    return render_template('beta.html', title='Beta', final_grade=final_grade)
