@@ -1,156 +1,272 @@
-{% extends "layout.html" %}
-{% block content %}
+{% extends "layout.html" %} {% block content %}
+<script>
+  function showAP() {
+    var x = document.getElementById("hide/show");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
 
-    <header align="center" style="max-width: 500px; margin-left: auto; margin-right: auto">
-      <div style="color: black; border: 5px solid black; border-radius: 30px; display: inline-block; background: white">
-          <br><br>
-          <i><h3>Instructions</h3>
-      <h5><p>Tap/Click each space and input your grades as numbers (No percentage sign). Click calculate and your answer will be in the green box.</p></h5></i>
-        <br>
-          <h6>(Without APs the full score is only about 4.29....@jaja_3210 on instagram pointed this out!)</h6>
-           <div class="alert">
-              {{ final_grade }}
+<header
+  align="center"
+  style="max-width: 500px; margin-left: auto; margin-right: auto;"
+>
+  <div
+    style="
+      color: black;
+      border: 5px solid black;
+      border-radius: 30px;
+      display: inline-block;
+      background: white;
+    "
+  >
+    <br /><br />
+    <i
+      ><h3>Instructions</h3>
+      <h5>
+        <p>
+          Tap/Click each space and input your grades as numbers (No percentage
+          sign). Click calculate and your answer will be in the green box.
+        </p>
+        <p>
+          <b
+            >If you don't have that amount of APs just leave the fields blank</b
+          >
+        </p>
+      </h5></i
+    >
+    <br />
+    <h6>
+      (Without APs the full score is only about 4.29....@jaja_3210 on instagram
+      pointed this out!)
+    </h6>
+    <div class="alert">
+      <b>
+        {{ final_grade }}
+      </b>
+    </div>
+    <br />
+    <br />
+    <fieldset class="form-group">
+      <form action="/honors" method="POST">
+        <div>
+          <label for="core1">
+            Core Subject 1:
+          </label>
+          <input
+            type="text"
+            placeholder="  100"
+            class="u-full-width"
+            name="core1"
+          />
+        </div>
+
+        <div>
+          <label for="core2">
+            Core Subject 2:
+          </label>
+          <input
+            type="text"
+            placeholder="  100"
+            class="u-full-width"
+            name="core2"
+          />
+        </div>
+
+        <div>
+          <label for="core3">
+            Core Subject 3:
+          </label>
+          <input
+            type="text"
+            placeholder="  100"
+            class="u-full-width"
+            name="core3"
+          />
+        </div>
+
+        <div>
+          <label for="core1">
+            Core Subject 4:
+          </label>
+          <input
+            type="text"
+            placeholder="  100"
+            class="u-full-width"
+            name="core4"
+          />
+        </div>
+
+        <hr />
+        <div class="form-group">
+          <div>
+            <label for="elective1">
+              Elective Subject 1:
+            </label>
+            <input
+              type="text"
+              placeholder="  100"
+              class="u-full-width"
+              name="elective1"
+            />
           </div>
-          <br>
-          <br>
-              <fieldset class="form-group">
-                  <form action="/honors" method="POST">
-                      <div>
-                      <label for="core1">
-                          Core Subject 1:
-                      </label>
-                      <input
-                      type="text"
-                      placeholder="  100"
-                      class="u-full-width"
-                      name="core1"
-                      >
-                      </div>
 
-                      <div>
-                      <label for="core2">
-                          Core Subject 2:
-                      </label>
-                      <input
-                      type="text"
-                      placeholder="  100"
-                      class="u-full-width"
-                      name="core2"
-                      >
-                      </div>
+          <div>
+            <label for="elective2">
+              Elective Subject 2:
+            </label>
+            <input
+              type="text"
+              placeholder="  100"
+              class="u-full-width"
+              name="elective2"
+            />
+          </div>
 
-                      <div>
-                      <label for="core3">
-                          Core Subject 3:
-                      </label>
-                      <input
-                      type="text"
-                      placeholder="  100"
-                      class="u-full-width"
-                      name="core3"
-                      >
-                      </div>
+          <div>
+            <label for="elective3">
+              Elective Subject 3:
+            </label>
+            <input
+              type="text"
+              placeholder="  100"
+              class="u-full-width"
+              name="elective3"
+            />
+          </div>
 
-                      <div>
-                      <label for="core1">
-                          Core Subject 4:
-                      </label>
-                      <input
-                      type="text"
-                      placeholder="  100"
-                      class="u-full-width"
-                      name="core4"
-                      >
-                      </div>
+          <div>
+            <label for="elective4">
+              Elective Subject 4:
+            </label>
+            <input
+              type="text"
+              placeholder="  100"
+              class="u-full-width"
+              name="elective4"
+            />
+          </div>
 
-              <hr>
-              <div class="form-group">
+          <div>
+            <label for="elective5">
+              Elective Subject 5:
+            </label>
+            <input
+              type="text"
+              placeholder="  100"
+              class="u-full-width"
+              name="elective5"
+            />
+          </div>
+          <div>
+            <label for="elective6">
+              Elective Subject 6:
+            </label>
+            <input
+              type="text"
+              placeholder="  100"
+              class="u-full-width"
+              name="elective6"
+            />
+          </div>
+        </div>
+        <button type="button" onclick="showAP()" class="btn btn-info">
+          Show APs
+        </button>
+        <hr />
+        <div id="hide/show" style="display: none;">
+          <div class="form-group">
+            <div>
+              <label for="AP1">
+                AP Subject 1:
+              </label>
+              <input
+                type="text"
+                placeholder="  100"
+                class="u-full-width"
+                name="AP1"
+              />
+            </div>
 
-                  <div>
-                      <label for="elective1">
-                          Elective Subject 1:
-                      </label>
-                      <input
-                      type="text"
-                      placeholder="  100"
-                      class="u-full-width"
-                      name="elective1"
-                      >
-                  </div>
+            <div>
+              <label for="AP2">
+                AP Subject 2:
+              </label>
+              <input
+                type="text"
+                placeholder="  100"
+                class="u-full-width"
+                name="AP2"
+              />
+            </div>
 
-                  <div>
-                      <label for="elective2">
-                          Elective Subject 2:
-                      </label>
-                      <input
-                      type="text"
-                      placeholder="  100"
-                      class="u-full-width"
-                      name="elective2"
-                      >
-                  </div>
+            <div>
+              <label for="AP3">
+                AP Subject 3:
+              </label>
+              <input
+                type="text"
+                placeholder="  100"
+                class="u-full-width"
+                name="AP3"
+              />
+            </div>
 
-                  <div>
-                      <label for="elective3">
-                          Elective Subject 3:
-                      </label>
-                      <input
-                      type="text"
-                      placeholder="  100"
-                      class="u-full-width"
-                      name="elective3"
-                      >
-                  </div>
+            <div>
+              <label for="AP4">
+                AP Subject 4:
+              </label>
+              <input
+                type="text"
+                placeholder="  100"
+                class="u-full-width"
+                name="AP4"
+              />
+            </div>
 
-                  <div>
-                      <label for="elective4">
-                          Elective Subject 4:
-                      </label>
-                      <input
-                      type="text"
-                      placeholder="  100"
-                      class="u-full-width"
-                      name="elective4"
-                      >
-                  </div>
+            <div>
+              <label for="AP5">
+                AP Subject 5:
+              </label>
+              <input
+                type="text"
+                placeholder="  100"
+                class="u-full-width"
+                name="AP5"
+              />
+            </div>
+            <div>
+              <label for="AP6">
+                AP Subject 6:
+              </label>
+              <input
+                type="text"
+                placeholder="  100"
+                class="u-full-width"
+                name="AP6"
+              />
+            </div>
+          </div>
+          <hr />
+        </div>
 
+        <input
+          type="submit"
+          class="btn btn-success"
+          value="Calculate"
+          id="calc_button"
+        />
+      </form>
+    </fieldset>
 
-                  <div>
-                      <label for="elective5">
-                          Elective Subject 5:
-                      </label>
-                      <input
-                      type="text"
-                      placeholder="  100"
-                      class="u-full-width"
-                      name="elective5"
-                      >
+    <br /><br /><br />
+    <br />
+    <a href="/"><h4>Back to Main Page</h4> </a>
+  </div>
+</header>
 
-                  </div>
-                  <div>
-                      <label for="elective6">
-                          Elective Subject 6:
-                      </label>
-                      <input
-                      type="text"
-                      placeholder="  100"
-                      class="u-full-width"
-                      name="elective6"
-                      >
-                  </div>
-
-
-              </div>
-            <input type="submit" value="Calculate" id="calc_button" />
-                  </form>
-                  </fieldset>
-
-          <br><br><br>
-      <br>
-      <a href="/"><h4> Back to Main Page</h4> </a>
-
-      </div>
-    </header>
-
-    <br>
+<br />
 {% endblock content %}
