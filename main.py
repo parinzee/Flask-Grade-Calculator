@@ -209,6 +209,23 @@ def beta_page():
         return render_template("beta.html", title="Honors")
 
 
+@app.route("/elementary", methods=['POST', 'GET'])
+def elementary():
+    
+    if request.method=='POST':
+        sub1 = int(request.form['sub1'])
+        sub2 = int(request.form['sub2'])
+        sub3 = int(request.form['sub3'])
+        sub4 = int(request.form['sub4'])
+
+        grade = (sub1 + sub2 + sub3 + sub4) / 4
+
+        return render_template("elementary.html", title="Elementary", final_grade=grade)
+
+    else:
+        return render_template("elementary.html", title="Elementary")
+
+
 @app.route("/credits")
 def credits():
     return render_template("credits.html", title="Credits!")
