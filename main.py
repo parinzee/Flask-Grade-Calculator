@@ -217,8 +217,9 @@ def elementary():
         sub2 = int(request.form['sub2'])
         sub3 = int(request.form['sub3'])
         sub4 = int(request.form['sub4'])
+        sub5 = int(request.form['sub5'])
 
-        grade = (sub1 + sub2 + sub3 + sub4) / 4
+        grade = (sub1 + sub2 + sub3 + sub4 + sub5) / 5
 
         return render_template("elementary.html", title="Elementary", final_grade=grade)
 
