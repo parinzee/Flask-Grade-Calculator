@@ -94,7 +94,7 @@ def home_page():
     return render_template("home.html")
 
 
-@app.route("/normal", methods=["GET", "POST"])
+@app.route("/standards", methods=["GET", "POST"])
 def normal_page():
     if request.method == "POST":
         core1 = request.form["core1"]
