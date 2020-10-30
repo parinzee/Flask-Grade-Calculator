@@ -15,13 +15,7 @@
   style="max-width: 500px; margin-left: auto; margin-right: auto;"
 >
   <div
-    style="
-      color: black;
-      border: 5px solid black;
-      border-radius: 30px;
-      display: inline-block;
-      background: white;
-    "
+    class='main_box'
   >
     <br /><br />
     <i
@@ -29,13 +23,9 @@
       <h5>
         <p>
           Tap/Click each space and input your grades as numbers (No percentage
-          sign). Click calculate and your answer will be in the green box.
+          sign). Click calculate and your answer will be in the box.
         </p>
-        <p>
-          <b
-            >If you don't have that amount of APs just leave the fields blank</b
-          >
-        </p>
+      <hr>
       </h5></i
     >
     <br />
@@ -43,11 +33,14 @@
       (Without APs the full score is only about 4.29....@jaja_3210 on instagram
       pointed this out!)
     </h6>
-    <div class="alert">
-      <b>
-        {{ final_grade }}
+    <div class="alert alert-primary" role="alert"><b style="font-size: 20px;">
+        {% if final_grade %} <b style="font-size: 40px;"> {{ final_grade }} </b> {% else %} YOUR GRADE WILL BE HERE!
+        {% endif %}
       </b>
     </div>
+    <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='/help'">
+      What are Core/Electives Subjects?
+    </button>
     <br />
     <br />
     <fieldset class="form-group">

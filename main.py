@@ -231,10 +231,13 @@ def elementary():
 def credits():
     return render_template("credits.html", title="Credits!")
 
+@app.route("/help")
+def help():
+    return render_template("help.html", title="Help")
 
-@app.before_request
-def before_request():
-    if request.url.startswith("http://"):
-        url = request.url.replace("http://", "https://", 1)
-        code = 301
-        return redirect(url, code=code)
+# @app.before_request
+# def before_request():
+#     if request.url.startswith("http://"):
+#         url = request.url.replace("http://", "https://", 1)
+#         code = 301
+#         return redirect(url, code=code)

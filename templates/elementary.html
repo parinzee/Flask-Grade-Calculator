@@ -2,15 +2,15 @@
 {% block content %}
 
     <header align="center" style="max-width: 500px; margin-left: auto; margin-right: auto">
-      <div style="color: black; border: 5px solid black; border-radius: 30px; display: inline-block; background: white">
+      <div class='main_box'>
           <br><br>
           <i><h3>Instructions</h3>
-      <h5><p>Tap/Click each space and input your grades as numbers (No percentage sign). Click calculate and your answer will be in the green box.</p></h5></i>
+      <h5><p>Tap/Click each space and input your grades as numbers (No percentage sign). Click calculate and your answer will be in the box.</p></h5></i>
         <br>
-           <div class="alert"><b>
-              {{ final_grade }}
-            </b>
-          </div>
+        <div class="alert alert-primary" role="alert"><b>
+          {% if final_grade %} {{ final_grade }} {% else %} YOUR GRADE WILL BE HERE! {% endif %}
+          </b>
+        </div>
           <p style="font-size='5px">Out of 100</p>
           <br>
           <br>

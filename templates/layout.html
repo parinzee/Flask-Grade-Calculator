@@ -29,9 +29,9 @@
 
     <style>
  body {
-	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 5s ease infinite;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, rgb(224, 28, 208), #23a6d5, #23d5ab);
+	background-size: 600% 600%;
+	animation: gradient 7s ease infinite;
 }
 
 @keyframes gradient {
@@ -45,16 +45,8 @@
 		background-position: 0% 50%;
 	}
 }
-    .alert {
-        background: green;
-        padding: 1rem;
-        border-radius: 5px;
-        color: white;
-        margin: 1rem;
-        font-size: 40px
-      }
-
       .main_box {
+        opacity: 0.9;
     padding: 1rem;
     color: black; 
     border: 5px solid black; 
@@ -73,23 +65,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {% block content %}
 
 {% endblock %}
-    <main>
-      <article>
-        <section>
-
-
-
-        </section>
-      </article>
-    </main>
-
-    <footer>
-
-    </footer>
-  <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   </body>
 </html>

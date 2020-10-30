@@ -2,20 +2,23 @@
 {% block content %}
 
     <header align="center" style="max-width: 500px; margin-left: auto; margin-right: auto">
-      <div style="color: black; border: 5px solid black; border-radius: 30px; display: inline-block; background: white">
+      <div class='main_box'>
           <br><br>
           <i><h3>Instructions</h3>
-      <h5><p>Tap/Click each space and input your grades as numbers (No percentage sign). Click calculate and your answer will be in the green box.</p></h5></i>
+      <h5><p>Tap/Click each space and input your grades as numbers (No percentage sign). Click calculate and your answer will be in the box.</p></h5></i>
         <br>
-           <div class="alert"><b>
-              {{ final_grade }}
+        <div class="alert alert-primary" role="alert"><b style="font-size: 20px;">
+            {% if final_grade %} <b style="font-size: 40px;"> {{ final_grade }} </b> {% else %} YOUR GRADE WILL BE HERE! {% endif %}
             </b>
           </div>
-          <p style="font-size='5px">Out of 4.0</p>
+          <p>Out of 4.0</p>
+        <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='/help'">
+            What are Core/Electives Subjects?
+        </button>
           <br>
           <br>
               <fieldset class="form-group">
-                  <form action="/normal" method="POST">
+                  <form action="/standards" method="POST">
                       <div>
                       <label for="core1">
                           Core Subject 1:
