@@ -1,6 +1,8 @@
 from flask import Flask, render_template, url_for, flash, redirect, request
+from flask_sitemap import Sitemap
 
 app = Flask(__name__)
+ext = Sitemap(app=app)
 
 app.config[
     "SECRET_KEY"
@@ -93,6 +95,10 @@ def calculation2(grade):
 def home_page():
     return render_template("home.html")
 
+@ext.register_generator
+def home_page():
+    yield 'home_page', {}
+
 
 @app.route("/standards", methods=["GET", "POST"])
 def normal_page():
@@ -150,6 +156,9 @@ def normal_page():
     else:
         return render_template("normal.html", title="Normal")
 
+@ext.register_generator
+def normal_page():
+    yield 'normal_page', {}
 
 @app.route("/honors", methods=["GET", "POST"])
 def beta_page():
@@ -208,16 +217,19 @@ def beta_page():
 
         return render_template("beta.html", title="Honors")
 
+@ext.register_generator
+def beta_page():
+    yield 'beta_page', {}
 
-@app.route("/elementary", methods=['POST', 'GET'])
+@app.route("/elementary", methods=["POST", "GET"])
 def elementary():
-    
-    if request.method=='POST':
-        sub1 = int(request.form['sub1'])
-        sub2 = int(request.form['sub2'])
-        sub3 = int(request.form['sub3'])
-        sub4 = int(request.form['sub4'])
-        sub5 = int(request.form['sub5'])
+
+    if request.method == "POST":
+        sub1 = int(request.form["sub1"])
+        sub2 = int(request.form["sub2"])
+        sub3 = int(request.form["sub3"])
+        sub4 = int(request.form["sub4"])
+        sub5 = int(request.form["sub5"])
 
         grade = (sub1 + sub2 + sub3 + sub4 + sub5) / 5
 
@@ -226,14 +238,26 @@ def elementary():
     else:
         return render_template("elementary.html", title="Elementary")
 
+@ext.register_generator
+def elementary():
+    yield 'elementary', {}
 
 @app.route("/credits")
 def credits():
     return render_template("credits.html", title="Credits!")
 
+@ext.register_generator
+def credits():
+    yield 'credits', {}
+
+
 @app.route("/help")
 def help():
     return render_template("help.html", title="Help")
+
+@ext.register_generator
+def help():
+    yield 'help', {}
 
 @app.before_request
 def before_request():
