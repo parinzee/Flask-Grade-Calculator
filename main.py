@@ -114,36 +114,41 @@ def normal_page():
         elect4 = request.form["elective4"]
         elect5 = request.form["elective5"]
         elect6 = request.form["elective6"]
+        
+        try:
+            calculation(core1)
+            core1 = calculation.grade
 
-        calculation(core1)
-        core1 = calculation.grade
+            calculation(core2)
+            core2 = calculation.grade
 
-        calculation(core2)
-        core2 = calculation.grade
+            calculation(core3)
+            core3 = calculation.grade
 
-        calculation(core3)
-        core3 = calculation.grade
+            calculation(core4)
+            core4 = calculation.grade
 
-        calculation(core4)
-        core4 = calculation.grade
+            calculation(elect1)
+            elect1 = calculation.grade
 
-        calculation(elect1)
-        elect1 = calculation.grade
+            calculation(elect2)
+            elect2 = calculation.grade
 
-        calculation(elect2)
-        elect2 = calculation.grade
+            calculation(elect3)
+            elect3 = calculation.grade
 
-        calculation(elect3)
-        elect3 = calculation.grade
+            calculation(elect4)
+            elect4 = calculation.grade
 
-        calculation(elect4)
-        elect4 = calculation.grade
+            calculation(elect5)
+            elect5 = calculation.grade
 
-        calculation(elect5)
-        elect5 = calculation.grade
+            calculation(elect6)
+            elect6 = calculation.grade
+        except:
+            final_grade = "Please don't enter text, just numbers"
+            return render_template("normal.html", title="Normal", final_grade=final_grade)
 
-        calculation(elect6)
-        elect6 = calculation.grade
 
         final_core = (core1 + core2 + core3 + core4) * 0.5
         final_elect = (elect1 + elect2 + elect3 + elect4 + elect5 + elect6) * 0.25
@@ -175,35 +180,39 @@ def beta_page():
         elect5 = request.form["elective5"]
         elect6 = request.form["elective6"]
 
-        calculation2(core1)
-        core1 = calculation2.grade
+        try:
+            calculation2(core1)
+            core1 = calculation2.grade
 
-        calculation2(core2)
-        core2 = calculation2.grade
+            calculation2(core2)
+            core2 = calculation2.grade
 
-        calculation2(core3)
-        core3 = calculation2.grade
+            calculation2(core3)
+            core3 = calculation2.grade
 
-        calculation2(core4)
-        core4 = calculation2.grade
+            calculation2(core4)
+            core4 = calculation2.grade
 
-        calculation(elect1)
-        elect1 = calculation.grade
+            calculation(elect1)
+            elect1 = calculation.grade
 
-        calculation(elect2)
-        elect2 = calculation.grade
+            calculation(elect2)
+            elect2 = calculation.grade
 
-        calculation(elect3)
-        elect3 = calculation.grade
+            calculation(elect3)
+            elect3 = calculation.grade
 
-        calculation(elect4)
-        elect4 = calculation.grade
+            calculation(elect4)
+            elect4 = calculation.grade
 
-        calculation(elect5)
-        elect5 = calculation.grade
+            calculation(elect5)
+            elect5 = calculation.grade
 
-        calculation(elect6)
-        elect6 = calculation.grade
+            calculation(elect6)
+            elect6 = calculation.grade
+        except:
+            final_grade = "Please don't enter text, just numbers"
+            return render_template("normal.html", title="Normal", final_grade=final_grade)
 
         final_core = (core1 + core2 + core3 + core4) * 0.5
         final_elect = (elect1 + elect2 + elect3 + elect4 + elect5 + elect6) * 0.25
@@ -231,11 +240,14 @@ def elementary():
         sub4 = int(request.form["sub4"])
         sub5 = int(request.form["sub5"])
 
+        try:
+            grade = (sub1 + sub2 + sub3 + sub4 + sub5) / 5
+        except:
+            final_grade = "Please don't enter text, just numbers"
+            return render_template("elementary.html", title="Elementary", final_grade=final_grade)
 
-        grade = (sub1 + sub2 + sub3 + sub4 + sub5) / 5
-
-        if grade > 200:
-            grade = "NANI OH MY, YOUR GRADE IS OVER 9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        if grade > 150:
+            grade = "Are you trying to break me? Are you Int?"
 
         return render_template("elementary.html", title="Elementary", final_grade=grade)
 
