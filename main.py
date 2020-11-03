@@ -231,7 +231,11 @@ def elementary():
         sub4 = int(request.form["sub4"])
         sub5 = int(request.form["sub5"])
 
+
         grade = (sub1 + sub2 + sub3 + sub4 + sub5) / 5
+
+        if grade > 200:
+            grade = "NANI OH MY, YOUR GRADE IS OVER 9000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
 
         return render_template("elementary.html", title="Elementary", final_grade=grade)
 
