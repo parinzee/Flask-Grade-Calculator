@@ -96,15 +96,16 @@ def calculation2(grade):
 def home_page():
     if request.method == "POST":
         language = request.form["lang"]
+        print(language)
         res = make_response
         # Don't touch it please
         expire_date = datetime.now()
         expire_date += timedelta(days=360)
 
-        res = make_response(url_for('home_page'), 200)
+        res = make_response(render_template('home.html'), 200)
 
         # Set secure to true to deployment
-        if language == "en":
+        if language == "English":
             res.set_cookie("gc_lang", 'en', expires=expire_date, secure=False)
         else:
             res.set_cookie("gc_lang", 'th', expires=expire_date, secure=False)
@@ -113,7 +114,7 @@ def home_page():
 
     if not request.cookies.get('gc_lang'):
         flash("คุณต้องการใช้ภาษาไทยหรือไม่?/Do you want to use English?")
-        
+        return render_template("home.html")
     else:
         return render_template("home.html")
 
