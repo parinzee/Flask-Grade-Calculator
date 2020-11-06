@@ -1,4 +1,5 @@
-from flask import Flask, render_template, url_for, flash, redirect, request
+from datetime import datetime, timedelta
+from flask import Flask, render_template, make_response, flash, redirect, request, url_for
 from flask_sitemap import Sitemap
 
 app = Flask(__name__)
@@ -91,9 +92,30 @@ def calculation2(grade):
         calculation2.grade = 0
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home_page():
-    return render_template("home.html")
+    if request.method == "POST":
+        language = request.form["lang"]
+        res = make_response
+        # Don't touch it please
+        expire_date = datetime.now()
+        expire_date += timedelta(days=360)
+
+        res = make_response(url_for('home_page'), 200)
+
+        # Set secure to true to deployment
+        if language == "en":
+            res.set_cookie("gc_lang", 'en', expires=expire_date, secure=False)
+        else:
+            res.set_cookie("gc_lang", 'th', expires=expire_date, secure=False)
+        
+        return res
+
+    if not request.cookies.get('gc_lang'):
+        flash("คุณต้องการใช้ภาษาไทยหรือไม่?/Do you want to use English?")
+        
+    else:
+        return render_template("home.html")
 
 @ext.register_generator
 def home_page():
