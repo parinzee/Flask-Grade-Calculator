@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from flask import Flask, render_template, make_response, flash, redirect, request, url_for
+from flask import Flask, render_template, make_response, flash, redirect, request
 from flask_sitemap import Sitemap
 
 app = Flask(__name__)
