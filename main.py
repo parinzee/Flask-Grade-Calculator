@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from flask import Flask, render_template, make_response, flash, redirect, request
+import os
 from flask_sitemap import Sitemap
 
 app = Flask(__name__)
@@ -7,7 +8,7 @@ ext = Sitemap(app=app)
 
 app.config[
     "SECRET_KEY"
-] = "dc2ff804898bac95f18c1d4f13cb6d127bbb48a86b99632cbe06931e3ec46776"
+] = os.environ["SECRET_KEY"]
 
 
 def calculation(grade):
