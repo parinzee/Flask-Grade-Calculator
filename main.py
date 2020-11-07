@@ -10,7 +10,6 @@ app.config[
     "SECRET_KEY"
 ] = os.environ["SECRET_KEY"]
 
-
 def calculation(grade):
     grade = int(grade)
     grade = float(grade)
