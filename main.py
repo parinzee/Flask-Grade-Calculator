@@ -3,7 +3,7 @@ from eval_grade import calculation, calculation2
 from datetime import datetime, timedelta
 from flask import Flask, render_template, make_response, flash, redirect, request
 from flask_sitemap import Sitemap
-from flask_babel import Babel, lazy_gettext
+from flask_babel import Babel, lazy_gettext, gettext
 
 app = Flask(__name__)
 ext = Sitemap(app=app)
