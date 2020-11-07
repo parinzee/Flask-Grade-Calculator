@@ -4,14 +4,14 @@
     <header align="center" style="text-align: center; max-width: 500px; margin-left: auto; margin-right: auto">
       <div class='main_box'>
           <br><br>
-          <i><h3>Instructions</h3>
-      <h5><p>Tap/Click each space and input your grades as numbers (No percentage sign). Click calculate and your answer will be in the box.</p></h5></i>
+          <i><h3>{{_('Instructions')}}</h3>
+      <h5><p>{{_('Tap/Click each space and input your grades as numbers (No percentage sign). Click calculate and your answer will be in the box.')}}</p></h5></i>
         <br>
         <div class="alert alert-primary" role="alert"><b>
-          {% if final_grade %} {{ final_grade }} {% else %} YOUR GRADE WILL BE HERE! {% endif %}
+          {% if final_grade %} {{ final_grade }} {% else %} {{_('YOUR GRADE WILL BE HERE!')}} {% endif %}
           </b>
         </div>
-          <p>Out of 100</p>
+          <p>{{_('Out of 100')}}</p>
           <br>
           <br>
               <fieldset class="form-group">
@@ -90,7 +90,7 @@
 
           <br><br><br>
       <br>
-      <a href="/"><h4> Back to Main Page</h4> </a>
+      <a href="/"><h4>{{_('Back to Main Page')}}</h4> </a>
 
     </header>
 
