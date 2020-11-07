@@ -1,6 +1,6 @@
+import os
 from datetime import datetime, timedelta
 from flask import Flask, render_template, make_response, flash, redirect, request
-import os
 from flask_sitemap import Sitemap
 
 app = Flask(__name__)
@@ -9,6 +9,7 @@ ext = Sitemap(app=app)
 app.config[
     "SECRET_KEY"
 ] = os.environ["SECRET_KEY"]
+
 
 def calculation(grade):
     grade = int(grade)
@@ -106,9 +107,9 @@ def home_page():
 
         # Set secure to true to deployment
         if language == "English":
-            res.set_cookie("gc_lang", 'en', expires=expire_date, secure=False)
+            res.set_cookie("gc_lang", 'en', expires=expire_date)
         else:
-            res.set_cookie("gc_lang", 'th', expires=expire_date, secure=False)
+            res.set_cookie("gc_lang", 'th', expires=expire_date)
         
         return res
 
