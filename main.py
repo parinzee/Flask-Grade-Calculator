@@ -1,4 +1,6 @@
 import os
+
+from flask.helpers import url_for
 from eval_grade import calculation, calculation2
 from datetime import datetime, timedelta
 from flask import Flask, render_template, make_response, flash, redirect, request
@@ -16,7 +18,7 @@ app.config[
 @babel.localeselector
 def get_locale():
     if not request.cookies.get('gc_lang'):
-        return 'en'
+        pass
     else:
         if request.cookies.get('gc_lang') == 'en':
             return 'en'
@@ -33,7 +35,7 @@ def home_page():
         expire_date = datetime.now()
         expire_date += timedelta(days=360)
 
-        res = make_response(render_template('home.html'), 200)
+        res = make_response(redirect(url_for('home_page'), 301))
 
         # Set secure to true to deployment
         if language == "English":
@@ -231,14 +233,14 @@ def help():
 
 
 
-@app.before_request
-def before_request():
-    if request.url == "https://python-grade-cal.herokuapp.com/sitemap.xml":
-        url = request.url.replace("https://", "http://", 1)
-        code = 301
-        return redirect(url, code=code)
+# @app.before_request
+# def before_request():
+#     if request.url == "https://python-grade-cal.herokuapp.com/sitemap.xml":
+#         url = request.url.replace("https://", "http://", 1)
+#         code = 301
+#         return redirect(url, code=code)
     
-    elif request.url.startswith("http://") and request.url != "http://python-grade-cal.herokuapp.com/sitemap.xml":
-        url = request.url.replace("http://", "https://", 1)
-        code = 301
-        return redirect(url, code=code)
+#     elif request.url.startswith("http://") and request.url != "http://python-grade-cal.herokuapp.com/sitemap.xml":
+#         url = request.url.replace("http://", "https://", 1)
+#         code = 301
+#         return redirect(url, code=code)
