@@ -1,0 +1,174 @@
+# Thai translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-11-07 19:55+0700\n"
+"PO-Revision-Date: 2020-11-07 19:58+0700\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: th\n"
+"Language-Team: th <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: main.py:103 main.py:168 main.py:200
+msgid "Please don't enter text, just numbers and fill out every row."
+msgstr ""
+
+#: templates/beta.html:22 templates/elementary.html:7 templates/normal.html:8
+msgid "Instructions"
+msgstr ""
+
+#: templates/beta.html:25
+msgid ""
+"Tap/Click each space and input your grades as numbers (No percentage\n"
+"          sign). Click calculate and your answer will be in the box."
+msgstr ""
+
+#: templates/beta.html:33
+msgid "WITHOUT APs FULL GRADE is"
+msgstr ""
+
+#: templates/beta.html:36 templates/elementary.html:11
+msgid "YOUR GRADE WILL BE HERE!"
+msgstr ""
+
+#: templates/beta.html:41 templates/normal.html:25
+msgid "What are Core/Electives Subjects?"
+msgstr ""
+
+#: templates/beta.html:49 templates/beta.html:61 templates/beta.html:73
+#: templates/beta.html:85 templates/normal.html:33 templates/normal.html:40
+#: templates/normal.html:47 templates/normal.html:54
+msgid "Core Subject"
+msgstr ""
+
+#: templates/beta.html:99 templates/beta.html:111 templates/beta.html:123
+#: templates/beta.html:135 templates/beta.html:147 templates/beta.html:158
+#: templates/normal.html:64 templates/normal.html:71 templates/normal.html:78
+#: templates/normal.html:85 templates/normal.html:93 templates/normal.html:100
+msgid "Elective Subject"
+msgstr ""
+
+#: templates/beta.html:259 templates/credits.html:20
+#: templates/elementary.html:93 templates/help.html:38
+#: templates/normal.html:114
+msgid "Back to Main Page"
+msgstr ""
+
+#: templates/elementary.html:8
+msgid ""
+"Tap/Click each space and input your grades as numbers (No percentage "
+"sign). Click calculate and your answer will be in the box."
+msgstr ""
+
+#: templates/elementary.html:14
+msgid "Out of 100"
+msgstr ""
+
+#: templates/help.html:7
+msgid "What are Core and Elective Subjects?"
+msgstr ""
+
+#: templates/help.html:9
+msgid ""
+"Core Subjects are subjects that are important as the name suggests, these"
+" are normally:"
+msgstr ""
+
+#: templates/help.html:11
+msgid "Math/Algebra or a similar class"
+msgstr ""
+
+#: templates/help.html:12
+msgid "L.A or a similar class"
+msgstr ""
+
+#: templates/help.html:13
+msgid "Integrated/Science or a similar class"
+msgstr ""
+
+#: templates/help.html:14
+msgid "Geography/Ancient History or a similar class"
+msgstr ""
+
+#: templates/help.html:20
+msgid "There should only be "
+msgstr ""
+
+#: templates/help.html:20
+msgid "4 core subjects!"
+msgstr ""
+
+#: templates/help.html:24
+msgid "The rest of the subjects are electives."
+msgstr ""
+
+#: templates/help.html:26
+msgid "There should be "
+msgstr ""
+
+#: templates/help.html:26
+msgid "10 Subjects in TOTAL"
+msgstr ""
+
+#: templates/help.html:32
+msgid "Do I have to put in the scores in a specific order?"
+msgstr ""
+
+#: templates/help.html:33
+msgid "No,"
+msgstr ""
+
+#: templates/help.html:33
+msgid "however, you do need to classify between "
+msgstr ""
+
+#: templates/help.html:33
+msgid "CORES AND ELECTIVES."
+msgstr ""
+
+#: templates/home.html:54
+msgid "Choose one option that is for your Class!"
+msgstr ""
+
+#: templates/home.html:81
+msgid "Made by:"
+msgstr ""
+
+#: templates/home.html:86
+msgid "Created"
+msgstr ""
+
+#: templates/home.html:89
+msgid "Last Updated"
+msgstr ""
+
+#: templates/home.html:92
+msgid "Version"
+msgstr ""
+
+#: templates/home.html:95
+msgid "CREDITS"
+msgstr ""
+
+#: templates/normal.html:11
+msgid ""
+"Tap/Click each space and input your grades as numbers (No percentage\n"
+"                    sign). Click calculate and your answer will be in the"
+" box."
+msgstr ""
+
+#: templates/normal.html:19
+msgid ""
+"YOUR GRADE WILL BE\n"
+"                HERE!"
+msgstr ""
+
