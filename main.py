@@ -3,21 +3,31 @@ from eval_grade import calculation, calculation2
 from datetime import datetime, timedelta
 from flask import Flask, render_template, make_response, flash, redirect, request
 from flask_sitemap import Sitemap
-from flask_babel import Babel
+from flask_babel import Babel, lazy_gettext
 
 app = Flask(__name__)
 ext = Sitemap(app=app)
+babel = Babel(app)
 
 app.config[
     "SECRET_KEY"
 ] = os.environ["SECRET_KEY"]
 
+@babel.localeselector
+def get_locale():
+    if not request.cookies.get('gc_lang'):
+        return 'en'
+    else:
+        if request.cookies.get('gc_lang') == 'en':
+            return 'en'
+        else:
+            return 'th'
 
 @app.route("/", methods=["GET", "POST"])
 def home_page():
     if request.method == "POST":
         language = request.form["lang"]
-        print(language)
+
         res = make_response
         # Don't touch it please
         expire_date = datetime.now()
@@ -90,7 +100,7 @@ def normal_page():
             calculation(elect6)
             elect6 = calculation.grade
         except:
-            final_grade = "Please don't enter text, just numbers"
+            final_grade = lazy_gettext(u"Please don't enter text, just numbers and fill out every row.")
             return render_template("normal.html", title="Normal", final_grade=final_grade)
 
 
@@ -155,7 +165,7 @@ def beta_page():
             calculation(elect6)
             elect6 = calculation.grade
         except:
-            final_grade = "Please don't enter text, just numbers"
+            final_grade = lazy_gettext(u"Please don't enter text, just numbers and fill out every row.")
             return render_template("normal.html", title="Normal", final_grade=final_grade)
 
         final_core = (core1 + core2 + core3 + core4) * 0.5
@@ -187,7 +197,7 @@ def elementary():
         try:
             grade = (sub1 + sub2 + sub3 + sub4 + sub5) / 5
         except:
-            final_grade = "Please don't enter text, just numbers"
+            final_grade = lazy_gettext(u"Please don't enter text, just numbers and fill out every row.")
             return render_template("elementary.html", title="Elementary", final_grade=final_grade)
 
         if grade > 150:
@@ -218,6 +228,8 @@ def help():
 @ext.register_generator
 def help():
     yield 'help', {}
+
+
 
 @app.before_request
 def before_request():
