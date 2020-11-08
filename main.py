@@ -49,9 +49,6 @@ def home_page():
 
 @app.route("/home")
 def home_real():
-    if not request.cookies.get('gc_lang'):
-        return redirect(url_for('home_page'))
-    else:
         return render_template('real_home.html')
 
 @ext.register_generator
