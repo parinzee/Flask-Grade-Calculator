@@ -231,25 +231,15 @@ def help():
 def help():
     yield 'help', {}
 
-@app.after_request
-def add_header(response):
-    """
-    Add headers to both force latest IE rendering engine or Chrome Frame,
-    and also to cache the rendered page for 10 minutes.
-    """
-    response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
-    response.headers['Cache-Control'] = 'public, max-age=0'
-    return response
 
-
-@app.before_request
-def before_request():
-    if request.url == "https://python-grade-cal.herokuapp.com/sitemap.xml":
-        url = request.url.replace("https://", "http://", 1)
-        code = 301
-        return redirect(url, code=code)
+# @app.before_request
+# def before_request():
+#     if request.url == "https://python-grade-cal.herokuapp.com/sitemap.xml":
+#         url = request.url.replace("https://", "http://", 1)
+#         code = 301
+#         return redirect(url, code=code)
     
-    elif request.url.startswith("http://") and request.url != "http://python-grade-cal.herokuapp.com/sitemap.xml":
-        url = request.url.replace("http://", "https://", 1)
-        code = 301
-        return redirect(url, code=code)
+#     elif request.url.startswith("http://") and request.url != "http://python-grade-cal.herokuapp.com/sitemap.xml":
+#         url = request.url.replace("http://", "https://", 1)
+#         code = 301
+#         return redirect(url, code=code)
