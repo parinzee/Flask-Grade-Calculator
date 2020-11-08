@@ -18,28 +18,30 @@ app.config[
 
 @app.route("/", methods=["GET", "POST"])
 def home_page():
-    if request.method == "POST":
-        language = request.form["lang"]
+    # if request.method == "POST":
+    #     language = request.form["lang"]
 
-        # Don't touch it please
-        expire_date = datetime.now()
-        expire_date += timedelta(days=360)
+    #     # Don't touch it please
+    #     expire_date = datetime.now()
+    #     expire_date += timedelta(days=360)
 
-        res = make_response(redirect(url_for('home_real'), 301))
+    #     res = make_response(redirect(url_for('home_real'), 301))
 
-        # Set secure to true to deployment
-        if language == "English":
-            res.set_cookie("gc_lang", 'en', expires=expire_date)
-        else:
-            res.set_cookie("gc_lang", 'th', expires=expire_date)
+    #     # Set secure to true to deployment
+    #     if language == "English":
+    #         res.set_cookie("gc_lang", 'en', expires=expire_date)
+    #     else:
+    #         res.set_cookie("gc_lang", 'th', expires=expire_date)
         
-        return res
+    #     return res
 
-    if not request.cookies.get('gc_lang'):
-        flash("คุณต้องการใช้ภาษาไทยหรือไม่?/Do you want to use English?")
-        return render_template("home.html")
-    else:
-        return redirect(url_for('home_real'))
+    # if not request.cookies.get('gc_lang'):
+    #     flash("คุณต้องการใช้ภาษาไทยหรือไม่?/Do you want to use English?")
+    #     return render_template("home.html")
+    # else:
+    #     return redirect(url_for('home_real'))
+
+    return redirect(url_for('home_real'))
 
 @ext.register_generator
 def home_page():
