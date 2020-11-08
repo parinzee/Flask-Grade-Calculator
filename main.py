@@ -15,15 +15,6 @@ app.config[
     "SECRET_KEY"
 ] = os.environ["SECRET_KEY"]
 
-@babel.localeselector
-def get_locale():
-    if not request.cookies.get('gc_lang'):
-        return 'th'
-    else:
-        if request.cookies.get('gc_lang') == 'en':
-            return 'en'
-        elif request.cookies.get('gc_lang') == 'th':
-            return 'th'
 
 @app.route("/", methods=["GET", "POST"])
 def home_page():
@@ -241,6 +232,19 @@ def help():
     yield 'help', {}
 
 
+@babel.localeselector
+def get_locale():
+    if not request.cookies.get('gc_lang'):
+        return 'th'
+    else:
+        if request.cookies.get('gc_lang') == 'en':
+            return 'en'
+        elif request.cookies.get('gc_lang') == 'th':
+            return 'th'
+
+@app.before_request
+def get_thefuckinglocale():
+    get_locale()
 # @app.before_request
 # def before_request():
 #     if request.url == "https://python-grade-cal.herokuapp.com/sitemap.xml":
