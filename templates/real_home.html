@@ -5,7 +5,7 @@
 {% with messages = get_flashed_messages() %}
 {% if messages %}
 {% for msg in messages %}
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   jQuery(window).on('load', function () {
     jQuery('#staticBackdrop').modal('show');
   });
@@ -35,7 +35,7 @@
       </fieldset>
     </div>
   </div>
-</div>
+</div> -->
 {% endfor %}
 {% endif %}
 {% endwith %}
@@ -50,7 +50,7 @@
       <i>
         <h2>Parin's Grade Calculator</h2>
         <h3>
-          <p>Choose one option that is for your Class!</p>
+          <p>{{_('Choose one option that is for your Class!')}}</p>
         </h3>
       </i></div>
     <nav style="font-size:20px">
@@ -77,21 +77,21 @@
       <br>
       <br>
       <h3>
-        <p>Made by: Parinthapat Pengpun</p>
+        <p>{{_('Made by:')}} Parinthapat Pengpun</p>
       </h3>
 
 
       <p>
-      <h6>Created: 5/7/2020</h6>
+      <h6>{{_('Created')}}: 5/7/2020</h6>
       </p>
       <p>
-      <h6>Last Updated: 7/11/2020</h6>
+      <h6>{{_('Last Updated')}}: 7/11/2020</h6>
       </p>
       <p>
-      <h6>Version: Final </h6>
+      <h6>{{_('Version')}}: Final </h6>
       </p>
       <p>
-      <h6><a href="credits">CREDITS</a> </h6>
+      <h6><a href="credits">{{_('CREDITS')}}</a> </h6>
       </p>
 
     </nav>

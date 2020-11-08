@@ -22,7 +22,7 @@ def get_locale():
     else:
         if request.cookies.get('gc_lang') == 'en':
             return 'en'
-        else:
+        elif request.cookies.get('gc_lang') == 'th':
             return 'th'
 
 @app.route("/", methods=["GET", "POST"])
@@ -30,12 +30,11 @@ def home_page():
     if request.method == "POST":
         language = request.form["lang"]
 
-        res = make_response
         # Don't touch it please
         expire_date = datetime.now()
         expire_date += timedelta(days=360)
 
-        res = make_response(redirect(url_for('home_page'), 301))
+        res = make_response(redirect(url_for('home_real'), 301))
 
         # Set secure to true to deployment
         if language == "English":
@@ -49,12 +48,22 @@ def home_page():
         flash("คุณต้องการใช้ภาษาไทยหรือไม่?/Do you want to use English?")
         return render_template("home.html")
     else:
-        return render_template("home.html")
+        return redirect(url_for('home_real'))
 
 @ext.register_generator
 def home_page():
     yield 'home_page', {}
 
+@app.route("/home")
+def home_real():
+    if not request.cookies.get('gc_lang'):
+        return redirect(url_for('home_page'))
+    else:
+        return render_template('real_home.html')
+
+@ext.register_generator
+def home_page():
+    yield 'home_real', {}
 
 @app.route("/standards", methods=["GET", "POST"])
 def normal_page():
