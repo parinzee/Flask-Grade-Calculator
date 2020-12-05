@@ -35,14 +35,6 @@
       </h5></i
     >
     <br />
-    <h6>
-      {{_('WITHOUT APs FULL GRADE is')}} <b>4.29</b>
-    </h6>
-    <div id="result" class="alert alert-primary" role="alert"><b style="font-size: 20px;">
-        {% if final_grade %} <b style="font-size: 40px;"> {{ final_grade }} </b> {% else %} {{_('YOUR GRADE WILL BE HERE!')}}
-        {% endif %}
-      </b>
-    </div>
     <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='/help'">
       {{_('What are Core/Electives Subjects?')}}
     </button>
@@ -264,7 +256,17 @@
       </form>
     </fieldset>
 
-    <br /><br /><br />
+    <br />
+    <div id="result" class="alert alert-primary" role="alert"><b style="font-size: 20px;">
+        {% if final_grade %} <b style="font-size: 40px;"> {{ final_grade }} </b> {% else %} {{_('YOUR GRADE WILL BE
+        HERE!')}}
+        {% endif %}
+      </b>
+    </div>
+    <h6>
+      {{_('WITHOUT APs FULL GRADE is')}} <b>4.29</b>
+    </h6>
+    <br /><br />
     <br />
     <a href="/"><h4>{{_('Back to Main Page')}}</h4> </a>
   </div>

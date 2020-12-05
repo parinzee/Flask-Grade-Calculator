@@ -12,11 +12,6 @@
           <i><h3>{{_('Instructions')}}</h3>
       <h5><p>{{_('Tap/Click each space and input your grades as numbers (No percentage sign). As you finish typing the grade will appear.')}}</p></h5></i>
         <br>
-        <div id="result" class="alert alert-primary" role="alert"><b>
-          {% if final_grade %} {{ final_grade }} {% else %} {{_('YOUR GRADE WILL BE HERE!')}} {% endif %}
-          </b>
-        </div>
-          <p>{{_('Out of 100')}}</p>
           <br>
           <br>
               <fieldset class="form-group">
@@ -95,7 +90,13 @@
                   </form>
                   </fieldset>
 
-          <br><br><br>
+          <br>
+          <div id="result" class="alert alert-primary" role="alert"><b>
+              {% if final_grade %} {{ final_grade }} {% else %} {{_('YOUR GRADE WILL BE HERE!')}} {% endif %}
+            </b>
+          </div>
+          <p>{{_('Out of 100')}}</p>
+          <br><br>
       <br>
       <a href="/"><h4>{{_('Back to Main Page')}}</h4> </a>
 

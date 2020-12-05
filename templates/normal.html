@@ -20,12 +20,6 @@
             </h5>
         </i>
         <br>
-        <div id="result" class="alert alert-primary" role="alert"><b style="font-size: 20px;">
-                {% if final_grade %} <b style="font-size: 40px;"> {{ final_grade }} </b> {% else %} {{_('YOUR GRADE WILL BE
-                HERE!')}} {% endif %}
-            </b>
-        </div>
-        <p>Out of 4.0</p>
         <button type="button" class="btn btn-danger btn-sm" onclick="window.location.href='/help'">
             {{_('What are Core/Electives Subjects?')}}
         </button>
@@ -112,7 +106,14 @@
             </form>
         </fieldset>
 
-        <br><br><br>
+        <br>
+        <div id="result" class="alert alert-primary" role="alert"><b style="font-size: 20px;">
+                {% if final_grade %} <b style="font-size: 40px;"> {{ final_grade }} </b> {% else %} {{_('YOUR GRADE WILL BE
+                HERE!')}} {% endif %}
+            </b>
+        </div>
+        <p>Out of 4.0</p>
+        <br><br>
         <br>
         <a href="/">
             <h4>{{_('Back to Main Page')}}</h4>
