@@ -1,4 +1,9 @@
 {% extends "layout.html" %}
+
+{% block header %}
+<script src="{{ url_for('static', filename='standard.js' )}}"></script>
+{% endblock header %}
+
 {% block content %}
 
 <header align="center" style="max-width: 500px; margin-left: auto; margin-right: auto">
@@ -9,13 +14,13 @@
             <h5>
                 <p>
                     {{ _('Tap/Click each space and input your grades as numbers (No percentage
-                    sign). Click calculate and your answer will be in the box.') }}
+                    sign). As you finish typing your grade will be in the box') }}
                 </p>
                 <hr>
             </h5>
         </i>
         <br>
-        <div class="alert alert-primary" role="alert"><b style="font-size: 20px;">
+        <div id="result" class="alert alert-primary" role="alert"><b style="font-size: 20px;">
                 {% if final_grade %} <b style="font-size: 40px;"> {{ final_grade }} </b> {% else %} {{_('YOUR GRADE WILL BE
                 HERE!')}} {% endif %}
             </b>
@@ -32,28 +37,28 @@
                     <label for="core1">
                         {{_('Core Subject')}} 1:
                     </label>
-                    <input type="text" placeholder="  100" class="u-full-width" name="core1">
+                    <input onchange="CalculateGrade()" type="text" placeholder="  100" class="u-full-width" name="core">
                 </div>
 
                 <div>
                     <label for="core2">
                         {{_('Core Subject')}} 2:
                     </label>
-                    <input type="text" placeholder="  100" class="u-full-width" name="core2">
+                    <input onchange="CalculateGrade()" type="text" placeholder="  100" class="u-full-width" name="core">
                 </div>
 
                 <div>
                     <label for="core3">
                         {{_('Core Subject')}} 3:
                     </label>
-                    <input type="text" placeholder="  100" class="u-full-width" name="core3">
+                    <input onchange="CalculateGrade()" type="text" placeholder="  100" class="u-full-width" name="core">
                 </div>
 
                 <div>
                     <label for="core1">
                         {{_('Core Subject')}} 4:
                     </label>
-                    <input type="text" placeholder="  100" class="u-full-width" name="core4">
+                    <input onchange="CalculateGrade()" type="text" placeholder="  100" class="u-full-width" name="core">
                 </div>
 
                 <hr>
@@ -63,28 +68,28 @@
                         <label for="elective1">
                             {{_('Elective Subject')}} 1:
                         </label>
-                        <input type="text" placeholder="  100" class="u-full-width" name="elective1">
+                        <input onchange="CalculateGrade()" type="text" placeholder="  100" class="u-full-width" name="elective">
                     </div>
 
                     <div>
                         <label for="elective2">
                             {{_('Elective Subject')}} 2:
                         </label>
-                        <input type="text" placeholder="  100" class="u-full-width" name="elective2">
+                        <input onchange="CalculateGrade()" type="text" placeholder="  100" class="u-full-width" name="elective">
                     </div>
 
                     <div>
                         <label for="elective3">
                             {{_('Elective Subject')}} 3:
                         </label>
-                        <input type="text" placeholder="  100" class="u-full-width" name="elective3">
+                        <input onchange="CalculateGrade()" type="text" placeholder="  100" class="u-full-width" name="elective">
                     </div>
 
                     <div>
                         <label for="elective4">
                             {{_('Elective Subject')}} 4:
                         </label>
-                        <input type="text" placeholder="  100" class="u-full-width" name="elective4">
+                        <input onchange="CalculateGrade()" type="text" placeholder="  100" class="u-full-width" name="elective">
                     </div>
 
 
@@ -92,19 +97,18 @@
                         <label for="elective5">
                             {{_('Elective Subject')}} 5:
                         </label>
-                        <input type="text" placeholder="  100" class="u-full-width" name="elective5">
+                        <input onchange="CalculateGrade()" type="text" placeholder="  100" class="u-full-width" name="elective">
 
                     </div>
                     <div>
                         <label for="elective6">
                             {{_('Elective Subject')}} 6:
                         </label>
-                        <input type="text" placeholder="  100" class="u-full-width" name="elective6">
+                        <input onchange="CalculateGrade()" type="text" placeholder="  100" class="u-full-width" name="elective">
                     </div>
 
 
                 </div>
-                <input type="submit" class="btn btn-success" value="Calculate" id="calc_button" />
             </form>
         </fieldset>
 

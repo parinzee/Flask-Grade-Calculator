@@ -1,13 +1,18 @@
 {% extends "layout.html" %}
+
+{% block header %}
+<script src="{{ url_for('static', filename='elementary.js' )}}"></script>
+{% endblock header %}
+
 {% block content %}
 
     <header align="center" style="max-width: 500px; margin-left: auto; margin-right: auto">
       <div class='main_box'>
           <br><br>
           <i><h3>{{_('Instructions')}}</h3>
-      <h5><p>{{_('Tap/Click each space and input your grades as numbers (No percentage sign). Click calculate and your answer will be in the box.')}}</p></h5></i>
+      <h5><p>{{_('Tap/Click each space and input your grades as numbers (No percentage sign). As you finish typing the grade will appear.')}}</p></h5></i>
         <br>
-        <div class="alert alert-primary" role="alert"><b>
+        <div id="result" class="alert alert-primary" role="alert"><b>
           {% if final_grade %} {{ final_grade }} {% else %} {{_('YOUR GRADE WILL BE HERE!')}} {% endif %}
           </b>
         </div>
@@ -44,35 +49,39 @@
                       type="text"
                       placeholder="  100"
                       class="u-full-width"
-                      name="sub1"
+                      name="sub"
                       >
                       <br>
                       <input
+                      onchange="CalculateGrade()"
                         type="text"
                         placeholder="  100"
                         class="u-full-width"
-                        name="sub2"
+                        name="sub"
                         >
                     <br>
                         <input
+                        onchange="CalculateGrade()"
                             type="text"
                             placeholder="  100"
                             class="u-full-width"
-                            name="sub3"
+                            name="sub"
                             >
                             <br>
                             <input
+                            onchange="CalculateGrade()"
                             type="text"
                             placeholder="  100"
                             class="u-full-width"
-                            name="sub4"
+                            name="sub"
                             >
                             <br>
                             <input
+                            onchange="CalculateGrade()"
                             type="text"
                             placeholder="  100"
                             class="u-full-width"
-                            name="sub5"
+                            name="sub"
                             >
 <br>
                           </div>
@@ -83,8 +92,6 @@
 <br>
                       
 
-
-            <input type="submit" class="btn btn-success" value="Calculate" id="calc_button" />
                   </form>
                   </fieldset>
 
