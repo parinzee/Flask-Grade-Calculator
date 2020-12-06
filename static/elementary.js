@@ -1,29 +1,24 @@
 /*jshint esversion: 6*/
 function CalculateGrade() {
-    let grade = [];
+	let grade = [];
 
-    for (let i = 0; i < 5; i++) {
-        grade[i] = document.getElementsByName("sub")[i].value;
-    }
+	for (let i = 0; i < 5; i++) {
+		grade[i] = document.getElementsByName("sub")[i].value;
+	}
 
-    let Final = 0;
+	let Final = 0;
 
-    for (let i = 0; i < 5; i++) {
-        
+	for (let i = 0; i < 5; i++) {
+		Final += parseFloat(grade[i]);
+	}
 
-        Final += parseFloat(grade[i]);
-    }
-    console.log(Final);
+	Final = Final / 5;
 
-    Final = Final / 5;
-
-    if (isNaN(Final)) {
-        document.getElementById("result").innerHTML = "<b style='font-size: 20px;'> " + "Calculating..." + " </b>";
-    }
-
-    else {
-        document.getElementById("result").innerHTML = "<b style='font-size: 40px;'> " + Final + " </b>";
-    }
-
-    
+	if (isNaN(Final)) {
+		document.getElementById("result").innerHTML =
+			"<b style='font-size: 20px;'> " + "Calculating..." + " </b>";
+	} else {
+		document.getElementById("result").innerHTML =
+			"<b style='font-size: 40px;'> " + Final + " </b>";
+	}
 }
