@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="/static/app.js"></script>
+
+		<meta charset="utf-8" />
+		<meta name="description" content="A grade universal grade calculator" />
+		<meta
+			name="keywords"
+			content="Parinthapat Pengpun, Parin, Grade-Calculator, Universal Grade calculator, Grade Cal Bcis, Grade"
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link
+			rel="apple-touch-icon"
+			sizes="200x200"
+			href="static/favicon.jpg"
+		/>
+		<link rel="apple-touch-startup-image" href="static/favicon.jpg" />
+		<meta name="apple-mobile-web-app-title" content="Grade Cal" />
+
+		<title>Grade Calculator - Parin</title>
+		<link rel="icon" href="static/favicon.png" type="image/x-icon" />
+		<link rel="manifest" href="/static/manifest.json" />
+
+		<style>
+			body {
+				background: linear-gradient(
+					-45deg,
+					#ee7752,
+					#e73c7e,
+					rgb(224, 28, 208),
+					#23a6d5,
+					#23d5ab
+				);
+				background-size: 600% 600%;
+				animation: gradient 7s ease infinite;
+			}
+
+			@keyframes gradient {
+				0% {
+					background-position: 0% 50%;
+				}
+
+				50% {
+					background-position: 100% 50%;
+				}
+
+				100% {
+					background-position: 0% 50%;
+				}
+			}
+
+			.main_box {
+				opacity: 0.9;
+				padding: 1rem;
+				color: black;
+				border: 2px solid black;
+				border-radius: 30px;
+				display: inline-block;
+				background: white;
+			}
+		</style>
+	</head>
+
+	<body>
+		<br /><br /><br /><br /><br /><br />
+		<header
+			align="center"
+			style="max-width: 500px; margin-left: auto; margin-right: auto"
+		>
+			<div class="main_box">
+				<br />
+
+				<div class="shadow-lg mb-5 bg-white rounded">
+					<img
+						src="static/bcis_logo.png"
+						width="200"
+						height="200"
+						class="rounded mx-auto d-block"
+						alt="BCIS LOGO"
+					/>
+					<i>
+						<h1>Parin's Grade Calculator</h1>
+						<h2>
+							<p>Seems like you're offline try again later!</p>
+						</h2>
+					</i>
+				</div>
+			</div>
+		</header>
+		<br /><br /><br /><br />
+	</body>
+</html>

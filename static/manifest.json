@@ -1,0 +1,16 @@
+{
+	"name": "Grade Calculator",
+	"short_name": "Grade - Calc",
+	"theme_color": "#ce79f2",
+	"background_color": "#ffffff",
+	"icons": [
+		{
+			"src": "/static/favicon.jpg",
+			"type": "image/png",
+			"sizes": "512x512"
+		}
+	],
+	"start_url": "/",
+	"display": "standalone",
+	"orientation": "portrait"
+}

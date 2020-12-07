@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -26,9 +27,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="apple-touch-icon" sizes="200x200" href="static/favicon.png">
-  <link rel="apple-touch-startup-image" href="static/favicon.png">
-  <meta name="apple-mobile-web-app-title" content="Grade Calculator">
+  <link rel="apple-touch-icon" sizes="200x200" href="static/favicon.jpg">
+  <link rel="apple-touch-startup-image" href="static/favicon.jpg">
+  <meta name="apple-mobile-web-app-title" content="Grade Cal">
 
   <meta name="google-site-verification" content="4JSozU42-heKV_6ZJ8pFOeQOUrjrdYnYRNRjtkUprkY" />
   <meta name="msvalidate.01" content="BCAFAF03C3DF56C72EE72F75BE73ECC7" />
@@ -38,6 +39,7 @@
   <title>Grade Calculator - Parin</title>
   {% endif %}
   <link rel='icon' href='static/favicon.png' type='image/x-icon' />
+  <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
 
   {% block header %}
 

@@ -15,6 +15,9 @@ app.config[
     "SECRET_KEY"
 ] = os.environ["SECRET_KEY"]
 
+@app.route('/service-worker.js')
+def sw():
+    return app.send_static_file('service-worker.js')
 
 @app.route("/", methods=["GET", "POST"])
 def home_page():
